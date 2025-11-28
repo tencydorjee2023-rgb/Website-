@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tency Dorjee - About</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-light': '#ffffff',
+          },
+          fontFamily: {
+            serif: ['Georgia', 'serif'],
+            mono: ['Roboto Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body class="font-serif text-black overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 bg-transparent text-white">
+    <div class="text-xl font-bold tracking-widest">Tency Dorjee</div>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-blue-300">HOME</a></li>
+      <li><a href="about.html" class="hover:text-blue-300">ABOUT</a></li>
+      <li><a href="project.html" class="hover:text-blue-300">PROJECTS</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECTION 1 -->
+  <section class="about-section h-screen">
+    <img src="images/a.jpeg" class="absolute inset-0 w-full h-full object-cover" />
+
+    <div class="absolute top-1/4 left-10 max-w-md text-black bg-white/80 p-6 rounded-xl">
+      <h1 class="text-4xl md:text-5xl font-bold fade-in">Hello, I'm Tency Dorjee</h1>
+      <p class="mt-4 text-lg md:text-xl fade-in-delay">
+        Welcome to my About page! Scroll down to learn more about my hobbies and passions.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <!-- SECTION 2: Hobbies -->
+<section class="about-section min-h-screen bg-white px-10 py-20 flex flex-col gap-16">
+
+  <!-- HIKING -->
+  <div class="flex flex-col md:flex-row gap-10 items-start">
+    <img src="images/aboutbg2.jpeg" class="hobbies-img max-w-lg rounded-lg shadow-md">
+    <div class="max-w-lg">
+      <h2 class="text-3xl font-bold mb-4">Hiking</h2>
+      <p class="text-lg mt-2">
+        I love hiking because it gives me peace and lets me explore nature. Exploring nature gives me freedom and reduces my stress. Nature and breathtaking views makes me feel the value of living. There is a qoute that goes, "You can't add days to your life but you can add life to your days.". Which means live your life with purpose and exploring the nature makes me feel like I got a purpose and adds life to my days!
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTBALL -->
+  <div class="flex flex-col md:flex-row gap-10 items-start">
+    <img src="images/football.jpeg" class="hobbies-img max-w-lg rounded-lg shadow-md">
+    <div class="max-w-lg">
+      <h2 class="text-3xl font-bold mb-4">Football</h2>
+      <p class="text-lg mt-2">
+        Football is like a second home to me. I started playing it at the age of 6, and by 9, I felt a deep love for it. 
+      Being on the field gives me an adrenaline rush, almost like a natural high. The teamwork, the strategy, and the sheer joy of playing make it an irreplaceable part of my life.
+      </p>
+    </div>
+  </div>
+
+  <!-- MANGA -->
+  <div class="flex flex-col md:flex-row gap-10 items-start">
+    <img src="images/manga.jpeg" class="hobbies-img max-w-lg rounded-lg shadow-md">
+    <div class="max-w-lg">
+      <h2 class="text-3xl font-bold mb-4">Manga</h2>
+      <p class="text-lg mt-2">
+        I’m drawn to mangas that teach meaningful life lessons. From Vinland Saga, I learned the value of loving even those we consider enemies and appreciating the beauty of the world around us. Vagabond showed me the importance of putting your heart and dedication into everything you do, no matter how small. Both mangas have inspired me to live with intention, grow as a person, and approach life with curiosity and purpose.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+</body>
+</html>

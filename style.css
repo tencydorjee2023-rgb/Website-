@@ -1,0 +1,123 @@
+/* HERO BACKGROUND */
+.hero-background {
+  background-image: url('images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 255, 224, 0.5);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: heroFade 2s ease-out forwards 0.5s;
+}
+
+/* TITLE CONTAINER */
+.title-container {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  width: 45%;
+  text-align: left;
+  z-index: 50;
+  opacity: 0;
+  animation: textFade 2s ease-out forwards;
+}
+
+/* ANIMATIONS */
+@keyframes heroFade {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Text delay for tagline */
+.animate-text-fade-delay {
+  animation-delay: 1s;
+  animation-name: textFade;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+/* HERO SECTION */
+.about-hero {
+  min-height: 100vh;
+  position: relative;
+  perspective: 1px; /* gives subtle 3D parallax feel */
+  overflow-x: hidden;
+}
+
+/* PORTRAIT IMAGE ZOOM EFFECT ON SCROLL */
+.about-img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease-out;
+  transform: scale(1.1); /* initial zoomed-in */
+  /* will scale down on scroll via CSS scroll-linked animation */
+}
+
+.about-hero:hover .about-img {
+  transform: scale(1); /* optional hover effect */
+}
+
+/* DESCRIPTION CONTAINER */
+.description-container {
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* TYPEWRITER EFFECT */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .12em solid black;
+  animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.typewriter-delay {
+  animation: typing 4s steps(80, end) forwards 2.5s, blink-caret 0.75s step-end infinite 2.5s;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .description-container {
+    top: 20%;
+    right: 5%;
+    max-width: 90%;
+  }
+}
+/* FADE-IN ANIMATION */
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInScale 2s forwards 0.5s;
+}
+

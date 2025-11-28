@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-light': '#ffffff',
+          },
+          fontFamily: {
+            serif: ['Georgia', 'serif'],
+            mono: ['Roboto Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="relative">
+
+  
+  
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 bg-transparent text-white">
+    <div class="text-xl font-bold tracking-widest">Tency Dorjee</div>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-blue-300">HOME</a></li>
+      <li><a href="about.html" class="hover:text-blue-300">ABOUT</a></li>
+      <li><a href="project/html" class="hover:text-blue-300">PROJECTS</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects relative z-10 px-10 py-32">
+    <h2 class="section-title fade-in text-white text-4xl font-bold mb-12">My Projects</h2>
+
+    <div class="card fade-in mb-16">
+      <img src="images/project1.jpeg" alt="Project 1">
+      <h3 class="text-2xl font-semibold mt-4">Project One</h3>
+      <p class="mt-2 text-lg text-white">
+        I am trying to make a lion right now, this is the basic structure inorder to sclupt a lion with clay.
+      </p>
+    </div>
+
+    <div class="card fade-in mb-16">
+      <img src="images/project2.png" alt="Project 2">
+      <h3 class="text-2xl font-semibold mt-4">Project Two</h3>
+      <p class="mt-2 text-lg text-white">
+        A clean and minimal design where I focused on improving my styling skills. It taught me how to properly use spacing, alignment, and smooth transitions.
+      </p>
+    </div>
+
+    <div class="card fade-in">
+      <img src="images/project3.png" alt="Project 3">
+      <h3 class="text-2xl font-semibold mt-4">Project Three</h3>
+      <p class="mt-2 text-lg text-white">
+        This project made me improve my JavaScript. I learned about events, animations, and how to make a page feel more alive and interactive.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

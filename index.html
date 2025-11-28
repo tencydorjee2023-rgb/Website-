@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <title>Tency Dorjee - Home page</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#0a0a0a',
+            'accent-blue': '#4c78a9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Roboto Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-primary-dark text-white font-sans">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 bg-transparent">
+    <div class="text-xl font-bold tracking-widest">Tency Dorjee</div>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-accent-blue">HOME</a></li>
+      <li><a href="about.html" class="hover:text-accent-blue">ABOUT</a></li>
+      <li><a href="project.html" class="hover:text-accent-blue">PROJECTS</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-background flex items-center justify-center text-center h-screen">
+    <div class="title-container">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-widest text-white">Tency Dorjee</h1>
+      <p class="mt-3 text-lg text-gray-300 font-mono">Student at The Royal Academy.</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="p-16 max-w-4xl mx-auto text-gray-300">
+    <h2 class="text-3xl font-bold mb-8 text-center">A Cinematic Look Below the Surface</h2>
+    <p>Welcome to my portfolio. This website is about Tency Dorjee.</p>
+    <p>I study at The Royal Academy, Pangbisa, Paro.</p>
+    <p class="mt-8">© 2025 | Tency Dorjee</p>
+  </main>
+
+</body>
+</html>
