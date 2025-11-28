@@ -1,179 +1,3 @@
-/* --- 1. CONFIGURATION AND BASE STYLES --- */
-
-/* Defines custom colors (from Tailwind config) */
-:root {
-  --primary-dark: #0a0a0a;
-  --accent-blue: #4c78a9;
-  --text-gray-300: #d1d5db; /* Approx. text-gray-300 */
-}
-
-/* body classes: bg-primary-dark text-white font-sans */
-body {
-  background-color: var(--primary-dark);
-  color: white;
-  font-family: 'Inter', sans-serif;
-  margin: 0; /* Important: removes default spacing */
-  line-height: 1.6;
-}
-
-/* Link Base Style */
-a {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* --- 2. NAVIGATION STYLES (Replaces all Tailwind utilities) --- */
-
-.nav-main {
-  /* fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 bg-transparent */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem; /* p-6 */
-  display: flex; /* flex */
-  justify-content: space-between; /* justify-between */
-  align-items: center; /* items-center */
-  z-index: 50; /* z-50 */
-  background-color: transparent; /* bg-transparent */
-}
-
-.nav-logo {
-  /* text-xl font-bold tracking-widest */
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 700; /* font-bold */
-  letter-spacing: 0.1em; /* tracking-widest */
-}
-
-.nav-links {
-  /* flex space-x-6 text-sm font-medium */
-  display: flex; /* flex */
-  gap: 1.5rem; /* space-x-6 */
-  list-style: none; /* remove bullet points */
-  padding: 0;
-  margin: 0;
-  font-size: 0.875rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-}
-
-.nav-link {
-  /* text-white (inherited) hover:text-accent-blue */
-  color: white;
-}
-
-.nav-link:hover {
-  color: var(--accent-blue);
-}
-
-/* --- 3. HERO SECTION STYLES --- */
-
-/* Existing custom background rules (hero-background) */
-.hero-background {
-  background-image: url('images/background.jpeg');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh; /* h-screen */
-}
-
-.hero-section {
-  /* flex items-center justify-center text-center */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative; /* Allows child absolute positioning */
-}
-
-/* Existing custom title positioning and animation trigger (title-container) */
-.title-container {
-  /* position: absolute; left: 10%; top: 15%; width: 45%; text-align: left; z-index: 50; */
-  position: absolute;
-  left: 10%;
-  top: 15%;
-  width: 45%;
-  text-align: left;
-  z-index: 50;
-  
-  /* Animation Start */
-  opacity: 0;
-  animation: textFade 2s ease-out forwards;
-}
-
-.hero-title {
-  /* text-5xl md:text-6xl font-extrabold tracking-widest text-white */
-  font-size: 3rem; /* text-5xl */
-  font-weight: 800; /* font-extrabold */
-  letter-spacing: 0.1em; /* tracking-widest */
-  margin: 0;
-}
-
-.hero-tagline {
-  /* mt-3 text-lg text-gray-300 font-mono */
-  margin-top: 0.75rem; /* mt-3 */
-  font-size: 1.125rem; /* text-lg */
-  color: var(--text-gray-300);
-  font-family: 'Roboto Mono', monospace; /* font-mono */
-  margin-bottom: 0;
-}
-
-/* --- 4. MAIN CONTENT STYLES --- */
-
-.main-content {
-  /* p-16 max-w-4xl mx-auto text-gray-300 */
-  padding: 4rem; /* p-16 */
-  max-width: 56rem; /* max-w-4xl */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto; /* mx-auto */
-  color: var(--text-gray-300);
-}
-
-.main-heading {
-  /* text-3xl font-bold mb-8 text-center */
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 700; /* font-bold */
-  margin-bottom: 2rem; /* mb-8 */
-  text-align: center; /* text-center */
-  color: white;
-}
-
-.copyright-text {
-  /* mt-8 */
-  margin-top: 2rem;
-}
-
-/* --- 5. ANIMATIONS --- */
-
-@keyframes textFade {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* --- 6. RESPONSIVENESS --- */
-
-@media (max-width: 768px) {
-    /* Adjust text size and position for smaller screens */
-    .hero-title {
-      font-size: 2.5rem;
-    }
-    .hero-tagline {
-      font-size: 1rem;
-    }
-    .title-container {
-        width: 80%;
-        left: 5%;
-        top: 15%;
-    }
-    .main-content {
-        padding: 2rem;
-    }
-}
-
-@media (min-width: 768px) {
-  /* md:text-6xl rule for larger screens */
-  .hero-title {
-    font-size: 4rem;
-  }
-}
 /* HERO BACKGROUND- imports the bg  */
 .hero-background {
   background-image: url('images/background.jpeg');
@@ -182,9 +6,6 @@ a {
 
   min-height: 100vh;
 }
-
-
-
 /* TITLE CONTAINER */
 .title-container {
   position: absolute;
@@ -196,16 +17,10 @@ a {
   opacity: 0;
   animation: textFade 2s ease-out forwards;
 }
-
-
 @keyframes textFade {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
-
-
-
 /* DESCRIPTION CONTAINER */
 .description-container {
   opacity: 0;
